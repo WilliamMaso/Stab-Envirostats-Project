@@ -1,0 +1,149 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="icon" href="BIO-01.png">
+		<!-- Font Style -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<!-- import the webpage's stylesheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/reset.css"/>
+		<link rel="stylesheet" href="/collective.css"/>
+		<!-- import the webpage's client-side javascript file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>STAB Environmental Statistics</title>
+
+		<script src="/socket.io/socket.io.js"></script>
+
+
+		<script src="/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id = "lbar">
+			<img id= 'logo' src="BIO-01.png"
+			width="100"
+			height="100" />
+				<form method= 'get' action='/'>
+					<button id= 'bthome' >Home</button>
+				</form>
+				<form method= 'get' action='/login'>
+					<button id= 'btlogin'>Login</button>
+				</form>
+				<form method= 'get' action='/about'>
+					<button id= 'btabout'>About</button>
+				</form>
+				<form method= 'get' action='/input'>
+					<button id= 'btdata' >Mussel</button>
+				</form> 
+				<form method= 'get' action='/benthic'>
+					<button id= 'btben' >Benthic</button>
+				</form> 
+				<form method= 'get' action='/collective'>
+					<button id= 'btcol' >Collective</button>
+				</form> 
+		</div>
+
+		<div id = 'inputs' style="
+			/* margin: auto; */
+			width: 50%;
+			position: absolute;
+			left: 50%;
+			top: 45%;
+			transform: translate(-50%, -50%);
+			background:white;
+			padding: 2px;
+		">
+		<form actions="" method = "POST">
+			<div>
+			<div>
+				<input type="text" name="date" id= 'date' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Date</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="river" id= 'river' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >River</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="site" id= 'site' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Site</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="grid" id= 'grid' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Grid</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="bscore" id= 'bscore' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Benthic Score</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="flowrate" id= 'flowrate' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Flow Rate (m/s)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="phosphate" id= 'phosphate' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Phosphate (mol/L)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="temp" id= 'temp' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Temperature (C°)</span>
+ 			</div> 
+
+ 			<div>
+				<input type="text" name="ph" id= 'ph' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >pH</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="ammonium" id= 'ammonium' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Ammonium (mg/L)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="nitrates" id= 'nitrates' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Nitrates (mg/L)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="ecoli" id= 'ecoli' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >E. coli (col./1mL)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="turbidity" id= 'turbidity' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Turbitidy (NTU)</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="doinitial" id= 'doinitial' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >DO (mg/L) Initial</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="dofinal" id= 'dofinal' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >DO (mg/L) Final</span>
+ 			</div>
+
+ 			<div>
+				<input type="text" name="hourslater" id= 'hourslater' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" ># Hours Later</span>
+ 			</div>
+
+			<div>
+				<input type="text" name="bod" id= 'bod' class="inputText" placeholder=" "/>
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >BOD/hr</span>
+ 			</div>
+ 		</div>
+
+ 			<button id= 'urmom' type="submit">Submit</button>
+ 		</form>
+	</div>
+</html>

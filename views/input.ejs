@@ -1,0 +1,135 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="icon" href="BIO-01.png">
+		<!-- Font Style -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- import the webpage's stylesheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/reset.css"/>
+		<link rel="stylesheet" href="/input.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<!-- import the webpage's client-side javascript file -->
+		<title>STAB Environmental Statistics</title>
+
+
+		<script src="/script.js" defer></script>
+	</head>
+	<body>
+		<div id = "lbar">
+			<img id= 'logo' src="BIO-01.png"
+			width="100"
+			height="100" />
+				<form method= 'get' action='/'>
+					<button id= 'bthome' >Home</button>
+				</form>
+				<form method= 'get' action='/login'>
+					<button id= 'btlogin'>Login</button>
+				</form>
+				<form method= 'get' action='/about'>
+					<button id= 'btabout'>About</button>
+				</form>
+				<form method= 'get' action='/input'>
+					<button id= 'btdata' >Mussel</button>
+				</form> 
+				<form method= 'get' action='/benthic'>
+					<button id= 'btben' >Benthic</button>
+				</form> 
+				<form method= 'get' action='/collective'>
+					<button id= 'btcol' >Collective</button>
+				</form> 
+		</div>
+
+		<div id = 'inputs' style="
+			/* margin: auto; */
+			width: 50%;
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			transform: translate(-50%, -50%);
+			background:white;
+			padding: 2px;
+			
+		">
+		<form actions="" method = "POST">
+			<div>
+				<input type="text" id="times" name="times" class="inputText" placeholder=" ">
+				<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Times Visited</span>
+			</div>
+			<div>
+				<input type="text" name="River" id= 'River' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >River</span>
+ 			</div>
+			
+			<div>
+				<input type="text" name="date" id= 'date' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Date</span>
+			</div>
+
+			<div>	
+				<input type="text" name="TimeStarted" id= 'TimeStarted' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Time Started</span>
+			</div>
+
+			<div>	
+				<input type="text" name="Species" id= 'Species' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Species</span>
+			</div>
+
+			<div>	
+				<input type="text" id="tagColor" name="tagColor" class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Tag Color</span>
+			</div>
+
+			<div>	
+				<input type="text" id="Tag" name="Tag" class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >ID Number</span>
+			</div>
+
+			<div>	
+				<input type="text" id="NewRecapture" name="NewRecapture" class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >New or Recapture</span>
+			</div>	
+
+			<div>	
+				<input type="text" id="SurfaceSubsurface" name="SurfaceSubsurface" class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Surface or Subsurface</span>
+			</div>	
+					
+			<div>	
+				<input type="text" id="Measurement" name="Measurement" class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Measurement(mm)</span>
+			</div>			
+
+			<div>	
+				<input type="text" name="Sex" id= 'Sex' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Sex</span>
+			</div>
+
+			<div>	
+				<input type="text" name="Spines" id= 'Spines' class="inputText" placeholder=" ">
+	 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Spines</span>
+			</div>
+
+			<div>
+				<input type="text" id="BrianOK" name="BrianOK" placeholder=" ">
+				<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Biologist Checked</span>
+			</div>
+
+	        <div>
+				<input type="text" id="notes" name="notes" placeholder=" ">
+				<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Notes</span>
+			</div>
+      		
+			<button id= 'urmom' type="submit">Submit</button>
+			</div>
+		</form>
+		</div>
+
+
+
+
+	</body>
+</html>

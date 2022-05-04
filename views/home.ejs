@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="icon" href="BIO-01.png">
+		<!-- Font Style -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<!-- import the webpage's stylesheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/reset.css"/>
+		<link rel="stylesheet" href="/home.css"/>
+		<!-- import the webpage's client-side javascript file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>STAB Environmental Statistics</title>
+		<script src="/socket.io/socket.io.js"></script>
+
+
+		<script src="/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id = "lbar">
+			<img id= 'logo' src="BIO-01.png"
+			width="100"
+			height="100" />
+				<form method= 'get' action='/'>
+					<button id= 'bthome' >Home</button>
+				</form>
+				<form method= 'get' action='/login'>
+					<button id= 'btlogin'>Login</button>
+				</form>
+				<form method= 'get' action='/about'>
+					<button id= 'btabout'>About</button>
+				</form>
+				<form method= 'get' action='/input'>
+					<button id= 'btdata' >Mussel</button>
+				</form> 
+				<form method= 'get' action='/benthic'>
+					<button id= 'btben' >Benthic</button>
+				</form> 
+				<form method= 'get' action='/collective'>
+					<button id= 'btcol' >Collective</button>
+				</form> 
+		</div>
+
+		<div id = "headline">
+			<h1 id = "hlwords">Environmental Statistics</h1>
+			
+		</div>
+
+	</body>
+</html>

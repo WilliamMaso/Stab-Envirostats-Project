@@ -1,0 +1,171 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="icon" href="BIO-01.png">
+		<!-- Font Style -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<!-- import the webpage's stylesheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/reset.css"/>
+		<link rel="stylesheet" href="/benthic.css"/>
+		<!-- import the webpage's client-side javascript file -->
+		<title>STAB Environmental Statistics</title>
+		<script src="/script.js" defer></script>
+	</head>
+		<body>
+			<div id = "lbar">
+				<img id= 'logo' src="BIO-01.png"
+				width="100"
+				height="100" />
+				<form method= 'get' action='/'>
+					<button id= 'bthome' >Home</button>
+				</form>
+				<form method= 'get' action='/login'>
+					<button id= 'btlogin'>Login</button>
+				</form>
+				<form method= 'get' action='/about'>
+					<button id= 'btabout'>About</button>
+				</form>
+				<form method= 'get' action='/input'>
+					<button id= 'btdata' >Mussel</button>
+				</form> 
+				<form method= 'get' action='/benthic'>
+					<button id= 'btben' >Benthic</button>
+				</form> 
+				<form method= 'get' action='/collective'>
+					<button id= 'btcol' >Collective</button>
+				</form> 
+			</div>
+			<div>
+				
+				<div id = 'inputs' style="
+						/* margin: auto; */
+						width: 50%;
+						position: absolute;
+						left: 50%;
+						top: 5%;
+						transform: translate(-50%, -50%)
+
+						">
+							<form actions="" method = "POST">
+							<div style="
+								position: absolute;
+								width: calc(50% - 4px);
+								background:white;
+									padding: 2px;
+									">
+								<div>
+									<input type="text" name="date" id= 'date' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Date</span>
+								</div>
+								<div>
+									<input type="text" name="river" id= 'river' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >River</span>
+					 			</div>
+								<div>
+									<input type="text" name="worm" id= 'worm' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Worms</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="flatworm" id= 'flatworm' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Flatworms</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="leeches" id= 'leeches' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Leeches</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="crayfish" id= 'crayfish' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Crayfish</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="sowbug" id= 'sowbug' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Sowbugs</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="scrub" id= 'scrub' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Scrubs</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="stoneflies" id= 'stoneflies' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Stoneflies</span>
+					 			</div>
+								<div>
+									<input type="text" name="mayflies" id= 'mayflies' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Mayflies</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="damsel_dragon" id= 'damsel_dragon' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Damselflies and Dragonflies</span>
+					 			</div>
+					 			<div>
+									<input type="text" name="hgram_fishfl_alder" id= 'hgram_fishfl_alder' class="inputText" placeholder=" " >
+						 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Hellgrammites, Fishflies, Alderflies</span>
+					 			</div>
+				 			</div>
+		 			<div style="
+			 			position: absolute;
+						width: calc(50% - 4px);
+						left:50%;
+						background:white;
+						padding: 2px;
+		 			">
+			 			<div>
+							<input type="text" name="cnetspin" id= 'cnetspin' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Common Netspinner</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="caddisfly" id= 'caddisfly' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Most Caddisfly</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="beetles" id= 'beetles' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Beetles</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="midges" id= 'midges' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Midges</span>
+			 			</div>
+						<div>
+							<input type="text" name="blackflies" id= 'blackflies' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Blackflies</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="truefly" id= 'truefly' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Most True Fly</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="gsnail" id= 'gsnail' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Gilled Snail</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="lsnail" id= 'lsnail' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Lunged Snail</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="clams" id= 'clams' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Clams</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="wpennies" id= 'wpennies' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Water Pennies</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="other" id= 'other' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Other</span>
+			 			</div>
+			 			<div>
+							<input type="text" name="tscore" id= 'tscore' class="inputText" placeholder=" " >
+				 			<span class="floating-label" style="background: white; padding-left: 2px; padding-right: 2px;" >Total Score</span>
+			 			</div>
+		 			</div>
+		 			<button id= 'urmom' type="submit" >Submit</button> 
+		 		</form>
+				</div>
+				
+			</div>
+
+	</body>
+</html>
