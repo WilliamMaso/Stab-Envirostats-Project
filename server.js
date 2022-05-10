@@ -110,7 +110,7 @@ app.get("/input", checkAuthenticated, (req, res) => {
 	res.render('input.ejs' ,{name: req.user.displayName})
 });
 
-app.get("/collective", (req, res) => {
+app.get("/collective", checkAuthenticated, (req, res) => {
 	res.render('collective.ejs', {name: req.user.displayName})
 });
 
