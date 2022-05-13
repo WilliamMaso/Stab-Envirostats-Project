@@ -9,8 +9,8 @@ const app = express();
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oidc');
 
-const GOOGLE_CLIENT_ID = " 239320005354-2sjdf1mksdfhqnnbh62oesajh02p3e49.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET= "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"
+const GOOGLE_CLIENT_ID = "239320005354-v01sec0j8ccieslnt5k12isnngedjdun.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET= "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"
 
 
 
